@@ -24,6 +24,7 @@ h5 {
 }
 
 p {
+  margin-top: 5px;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 5px;
@@ -70,4 +71,18 @@ input[type=submit]:hover {
 
 .broadcast_form {
   text-align: center;
+}
+
+.helpline {
+  text-align: center;
+}
+
+.helpline_entry {
+  text-align: center;
+  background-color: #bbbbbb;
+  color: #444444;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 2px;
+  padding-bottom: 5px;
 }
