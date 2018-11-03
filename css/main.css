@@ -33,7 +33,7 @@ p {
 }
 
 input[type=text] {
-  width: 75%;
+  width: 60%;
   height: 25px;
   border: 0px;
   font-size: 20px;
@@ -70,7 +70,7 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-.broadcast_form {
+.message {
   text-align: center;
 }
 
@@ -99,4 +99,9 @@ input[type=submit]:hover {
   bottom: 0;
   background-color: #444444;
   color: #dddddd;
+}
+
+::placeholder {
+  color: #dddddd;
+  text-align: center;
 }

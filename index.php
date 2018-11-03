@@ -11,19 +11,28 @@
 <body>
 
 <div class="header">
-<h1>EXPONDENT</h1>
-<h5>ALWAYS READY TO ASSIST</h5>
-<h5>+44 741 834 3330</h5>
+  <h1>EXPONDENT</h1>
+  <h5>ALWAYS READY TO ASSIST</h5>
+  <h5>+44 741 834 3330</h5>
 </div>
 
-<div class="broadcast">
-<h2>EMERGENCY SMS BROADCAST</h2>
-<form action="http://51.15.114.121:1880/form" class="broadcast_form" method="post">
-  <p>This SMS message will be sent to all listed phone numbers. Please use responsibly.</p>
-  <p>Message</p><input type="text" name="message"><br>
-  <p>Phone Number(s)</p><input type="text" name="dest"><br>
-  <input class="button" type="submit" value="SEND">
-</form>
+<div class="message">
+  <h2>EMERGENCY SMS MESSAGE</h2>
+  <form action="http://51.15.114.121:1880/form" class="broadcast_form" method="post">
+    <p>This SMS message will be sent to the listed phone number. Please use responsibly.</p><br>
+    <p></p><input type="text" name="message" placeholder="Message"><br>
+    <p></p><input type="text" name="dest" placeholder="Phone Number"><br>
+    <input class="button" type="submit" value="SEND">
+  </form>
+</div>
+
+<div class="message">
+  <h2>RESPONDERS SMS MESSAGE</h2>
+  <form action="http://51.15.114.121:1880/allnum" class="broadcast_form" method="post">
+    <p>This SMS message will be sent to all listed phone numbers of first respondents. Please use responsibly.</p><br>
+    <p></p><input type="text" name="message" placeholder="Message"><br>
+    <input class="button" type="submit" value="SEND">
+  </form>
 </div>
 
 <div class="helpline">
@@ -42,7 +51,7 @@
     } closedir($handle);
   } else {
     $html .= "<p>Error reading files from server</p>";
-  } echo $html;
+  } echo $html; */
    ?>
   <h2>HELPLINE MESSAGES</h2>
   <div class="helpline_entry">
