@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <script src="js/main.js"></script>
+    <script src='js/jquery-3.3.1.min.js'></script>
   </head>
 <body>
 
@@ -26,6 +27,23 @@
 </div>
 
 <div class="helpline">
+  <?php
+  $html = "<h2>HELPLINE MESSAGES</h2>";
+  if ($handle = opendir("./entries/")) {
+    while (false !== ($entry = readdir($handle))) {
+      if ($entry != "." && $entry != "..") {
+        $html .= "
+        <div class="helpline_entry" id="$entry">
+          <p>$entry</p>
+          <audio controls><source src="$entry" type="audio/mp3">
+        </div>
+        ";
+      }
+    } closedir($handle);
+  } else {
+    $html .= "<p>Error reading files from server</p>";
+  } echo $html;
+   ?>
   <h2>HELPLINE MESSAGES</h2>
   <div class="helpline_entry">
     <p>PHONE NUMBER</p>
