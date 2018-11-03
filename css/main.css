@@ -1,0 +1,37 @@
+body {
+  margin: 0px;
+  font-family: 'Lato', sans-serif;
+  background-color: #dddddd;
+  color: #444444;
+}
+
+h1 {
+  font-size: 500%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 125%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.header {
+  font-family: 'Lato', sans-serif;
+  background-color: #444444;
+  color: #dddddd;
+  margin-top: 0px;
+  padding: 10px;
+  text-align: center;
+}
+
+.broadcast_form {
+  text-align: center;
+}

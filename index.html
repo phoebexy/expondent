@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <script src="js/main.js"></script>
   </head>
 <body>
 
-<h2>Emergency SMS Broadcast</h2>
+<div class="header">
+<h1>EXPONDENT</h1>
+<h5>READY TO ASSIST</h5>
+</div>
+
+<h2>EMERGENCY SMS BROADCAST</h2>
 
 <form action="http://51.15.114.121:1880/form" class="broadcast_form" method="post">
+  <p>This SMS message will be sent to all listed phone numbers. Please use responsibly.</p>
+  Message
+  <br><input type="text" name="message"><br>
   Phone Number(s) <br><input type="text" name="dest"><br>
-  Message <br><input type="text" name="message"><br>
   <input type="submit" value="Send">
 </form>
 
