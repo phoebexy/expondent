@@ -83,6 +83,19 @@ input[type=submit]:hover {
   color: #444444;
   margin-left: 20%;
   margin-right: 20%;
+  margin-bottom: 10px;
   padding-top: 2px;
   padding-bottom: 5px;
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  bottom: 0;
+  background-color: #444444;
+  color: #dddddd;
 }
