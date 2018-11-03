@@ -8,7 +8,7 @@
     <script src="js/main.js"></script>
     <script src='js/jquery-3.3.1.min.js'></script>
   </head>
-<body>
+<body background="bgimage.jpg">
 
 <div class="header">
   <h1>EXPONDENT</h1>
