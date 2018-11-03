@@ -23,6 +23,42 @@ h5 {
   margin-bottom: 10px;
 }
 
+p {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+input[type=text] {
+  width: 75%;
+  height: 25px;
+  border: 0px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  background-color: #dddddd
+  color: #444444;
+}
+
+input[type=submit] {
+  border: 10px left right top bottom;
+  border-color: #444444;
+  margin-top: 15px;
+  width: 25%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #dddddd;
+  color: #444444;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+input[type=submit]:hover {
+  color: #ffffff;
+  background-color: #666666;
+}
+
 .header {
   font-family: 'Lato', sans-serif;
   background-color: #444444;
