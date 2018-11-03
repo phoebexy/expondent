@@ -53,23 +53,6 @@
     $html .= "<p>Error reading files from server</p>";
   } echo $html;
    ?>
-  <h2>HELPLINE MESSAGES</h2>
-  <div class="helpline_entry">
-    <p>PHONE NUMBER</p>
-    <audio controls><source src="" type="audio/wav">
-  </div>
-  <div class="helpline_entry">
-    <p>PHONE NUMBER</p>
-    <audio controls><source src="" type="audio/wav">
-  </div>
-  <div class="helpline_entry">
-    <p>PHONE NUMBER</p>
-    <audio controls><source src="" type="audio/wav">
-  </div>
-  <div class="helpline_entry">
-    <p>PHONE NUMBER</p>
-    <audio controls><source src="" type="audio/wav">
-  </div>
 </div>
 
 <div class="footer">
