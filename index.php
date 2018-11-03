@@ -38,8 +38,8 @@
 <div class="helpline">
   <?php
   $html = "<h2>HELPLINE MESSAGES</h2>";
-  if ($handle = opendir("./entries/")) {
-    while (false !== ($entry = readdir($handle))) {
+  if ($handle = scandir("./entries/")) {
+    foreach ($handle as $entry) {
       if ($entry != "." && $entry != "..") {
         $html .= "
         <div class='helpline_entry' id='" + $entry + "'>
@@ -48,7 +48,7 @@
         </div>
         ";
       }
-    } closedir($handle);
+    } $html .= "<p>All entries loaded from server</p>";
   } else {
     $html .= "<p>Error reading files from server</p>";
   } echo $html;
