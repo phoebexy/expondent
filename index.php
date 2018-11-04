@@ -41,10 +41,7 @@
   if ($handle = scandir("./entries/")) {
     foreach ($handle as $entry) {
       if ($entry != "." && $entry != "..") {
-        $html .= "<div class='helpline_entry' id='$entry'>" +
-          "<p>$entry</p>" +
-          "<audio controls><source src='./entries/$entry' type='audio/mp3'>" +
-          "</div>";
+        $html .= "<div class='helpline_entry' id='$entry'><p>$entry</p><audio controls><source src='./entries/$entry' type='audio/mp3'></div>";
       }
     } $html .= "<p>All entries loaded from server</p>";
   } else {
