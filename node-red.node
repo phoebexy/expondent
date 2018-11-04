@@ -1,0 +1,219 @@
+[
+    {
+        "id": "e00f1d16.ad40c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bbecd180.485c5",
+        "type": "nexmocreds",
+        "z": "",
+        "name": "nodered",
+        "apikey": "ff3b4059",
+        "apisecret": "ENKM4wSGt5MP43JJ",
+        "appid": "cf04b314-dbed-4456-8703-47585f5db286",
+        "privatekey": "./private.key"
+    },
+    {
+        "id": "d77bb121.a4dee",
+        "type": "http in",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "url": "/form",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 70,
+        "y": 240,
+        "wires": [
+            [
+                "1b1a34ed.f1e6f3",
+                "cc29794c.d3d7d8",
+                "9eb359ae.87849"
+            ]
+        ]
+    },
+    {
+        "id": "1b1a34ed.f1e6f3",
+        "type": "http response",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 90,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "cc29794c.d3d7d8",
+        "type": "debug",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 110,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9eb359ae.87849",
+        "type": "sendsms",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "to": "{{dest}}",
+        "fr": "Expondent",
+        "text": "{{message}}",
+        "unicode": false,
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "3cbcb9cd.e99096"
+            ]
+        ]
+    },
+    {
+        "id": "698ff14.dc68b1",
+        "type": "voice webhook",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "url": "/recording",
+        "method": "post",
+        "x": 150,
+        "y": 760,
+        "wires": [
+            [
+                "76e48f00.06f318",
+                "1b1a34ed.f1e6f3"
+            ]
+        ]
+    },
+    {
+        "id": "84217973.43db",
+        "type": "file",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "filename": "record{{start_time}}",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "x": 670,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76e48f00.06f318",
+        "type": "getrecording",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "x": 400,
+        "y": 740,
+        "wires": [
+            [
+                "84217973.43db"
+            ]
+        ]
+    },
+    {
+        "id": "3cbcb9cd.e99096",
+        "type": "debug",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 690,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4c83f612.a5a6a",
+        "type": "sendsms",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "to": "447971881475",
+        "fr": "Expondent",
+        "text": "{{message}}",
+        "unicode": false,
+        "x": 440,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d0b03b.a79287c",
+        "type": "http in",
+        "z": "e00f1d16.ad40c",
+        "name": "",
+        "url": "/allnum",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "4c83f612.a5a6a",
+                "a9ddf2.b460ea1",
+                "9e81be1.bd0ac4",
+                "2d4c2ccb.cb6184",
+                "1b1a34ed.f1e6f3"
+            ]
+        ]
+    },
+    {
+        "id": "a9ddf2.b460ea1",
+        "type": "sendsms",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "to": "447904185457",
+        "fr": "Expondent",
+        "text": "{{message}}",
+        "unicode": false,
+        "x": 410,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e81be1.bd0ac4",
+        "type": "sendsms",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "to": "447929042830",
+        "fr": "Expondent",
+        "text": "{{message}}",
+        "unicode": false,
+        "x": 450,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2d4c2ccb.cb6184",
+        "type": "sendsms",
+        "z": "e00f1d16.ad40c",
+        "creds": "bbecd180.485c5",
+        "to": "447784475405",
+        "fr": "Expondent",
+        "text": "{{message}}",
+        "unicode": false,
+        "x": 430,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    }
+]
