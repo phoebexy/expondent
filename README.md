@@ -4,7 +4,7 @@ An emergency response coordination platform for first respondents
 
 ## Release
 
-Developed by Phoebe Yao (phoebexy), Alistair Robinson (A-Robinson-8), Joe SP (toxicologyoverload) and Jess Shires (JSShi01) in 24 hours for Hack The Midlands 2018
+Developed by Phoebe Yao (phoebexy), Alistair Robinson (A-Robinson-8), Ben SP (toxicologyoverload) and Jess Shires (JSShi01) in 24 hours for Hack The Midlands 2018
 Visit us at Expondent.uk
 
 ## Overview
